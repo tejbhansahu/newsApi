@@ -73,7 +73,7 @@ class _HomeState extends State<Home> {
     return Expanded(
       child: Consumer<HomeProvider>(builder: (context, value, child) {
         if (value.isArticlesLoading) {
-          return const Center(
+          return Center(
             child: CircularProgressIndicator(),
           );
         } else {

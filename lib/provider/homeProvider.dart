@@ -132,6 +132,7 @@ class HomeData extends ChangeNotifier implements HomeProvider {
       {bool isFiltering = false, String? sources, String? searchQuery}) async {
     try {
       isArticlesLoading = true;
+      notifyListeners();
       var response = await _dio.get(searchQuery == null
           ? API.newsApi(
               country:
