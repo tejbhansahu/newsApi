@@ -5,8 +5,8 @@ class API {
 
   static String newsApi(
           {required String country, String? source, int page = 1}) =>
-      "https://newsapi.org/v2/top-headlines?country=$country&$page&sources=${source ?? ''}&apiKey=$apiKey1";
+      "https://newsapi.org/v2/top-headlines?country=$country&page=$page&sources=${source ?? ''}&apiKey=$apiKey";
 
   static String searchApi({required String query, int page = 1}) =>
-      "https://newsapi.org/v2/everything?q=$query&$page&apiKey=$apiKey1";
+      "https://newsapi.org/v2/everything?q=$query&page=$page&apiKey=$apiKey";
 }

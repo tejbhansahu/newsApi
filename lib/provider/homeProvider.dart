@@ -93,7 +93,7 @@ class HomeData extends ChangeNotifier implements HomeProvider {
 
   @override
   clearArticles() {
-   _article.clear();
+    _article.clear();
   }
 
   @override
@@ -137,9 +137,10 @@ class HomeData extends ChangeNotifier implements HomeProvider {
           ? API.newsApi(
               country:
                   isFiltering ? '' : selectedCountry.entries.elementAt(0).value,
-              source: sources ?? '', page: _page)
+              source: sources ?? '',
+              page: _page)
           : API.searchApi(query: searchQuery, page: _page));
-      print(response.data);
+      print("Page No.: $_page -> ${response.data}");
       if (response.statusCode == 200) {
         _page = _page + 1;
         print("Page length is: $_page");

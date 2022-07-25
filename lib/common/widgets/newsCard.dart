@@ -52,7 +52,7 @@ Widget newsCardWidget(BuildContext context,
                     ],
                   ),
                   SizedBox(
-                    width: 120,
+                    width: 110,
                     height: 140,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
